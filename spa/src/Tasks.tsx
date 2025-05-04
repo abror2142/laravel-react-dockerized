@@ -6,7 +6,8 @@ function Tasks () {
     const [reload, setReload] = useState<boolean>(false);
 
     return (
-        <div>
+        <div className="px-8 py-4 rounded-md bg-indigo-50 min-w-sm flex flex-col gap-3">
+            <p className="text-lg font-semibold text-center">Tasks</p>
             <CreateTask setReload={setReload} />
             <ShowTasks reload={reload} setReload={setReload} />
         </div>
