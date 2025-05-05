@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { v4 } from "uuid";
 
 interface Task {
     id: string,
@@ -43,7 +44,7 @@ function ShowTasks({reload, setReload}: Props){
                     tasks.length > 0 
                     ? <div>
                         <ul className="flex flex-col gap-2">
-                            {tasks.map(task => (<li className="px-4 py-1 rounded-md bg-indigo-100">{task?.name}</li>))}
+                            {tasks.map(task => (<li key={v4()} className="px-4 py-1 rounded-md bg-indigo-100">{task?.name}</li>))}
                         </ul>
                     </div>
                     : <p className="px-4 py-2 rounded-md bg-indigo-100 italic text-red-500">No tasks yet!</p>
