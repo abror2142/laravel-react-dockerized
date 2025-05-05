@@ -8,6 +8,6 @@ class ApiController extends Controller
 {
     public function index() 
     {
-        return response()->json(['message' => 'This message comes from laravel backend!']);
+        return response()->json(['message' => 'This message comes from laravel backend! -- UPDATED']);
     }
 }
